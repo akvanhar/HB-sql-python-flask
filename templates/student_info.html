@@ -4,8 +4,20 @@
     <title>Student Info</title>
 </head>
 <body>
-<h1>{{ first }} {{ last }}</h1>
+    <h1>{{ first }} {{ last }}</h1>
 
-<p>GitHub Account: {{ github }}</p>
+    <p>GitHub Account: {{ github }}</p>
+    <p> Here are {{first}}'s results:
+    <ul id='project'>
+        <!-- {% if results %} -->
+            {% for result in results%}
+                <li>
+                    {{result}}
+                </li>
+            {% endfor %}
+        <!-- {% else %} -->
+            <!-- This user has no projects -->
+        <!-- {% endif %} -->
+    </ul>
 </body>
 </html>

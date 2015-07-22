@@ -42,6 +42,7 @@ def make_new_student(first_name, last_name, github):
     db_connection.commit()
 
     print "Successfully added student: %s %s" %(first_name, last_name)
+    return (first_name, last_name, github)
 
 
 def get_project_by_title(title):
@@ -108,6 +109,7 @@ def get_all_grades(github):
         for result in results:
             grade, title = result
             print "Here are the grades for %s: %s, %s" % (github, title, grade)
+    return results
 
 def handle_input():
     """Main loop.
