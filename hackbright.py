@@ -27,6 +27,7 @@ def get_student_by_github(github):
     else:
         print "Student: %s %s\nGithub account: %s" % (
             row[0], row[1], row[2])
+        return (row[0], row[1], row[2])
 
 
 def make_new_student(first_name, last_name, github):
